@@ -25,7 +25,7 @@ const Album = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
+      if ((window.innerHeight + document.documentElement.scrollTop) === document.documentElement.offsetHeight) {
         fetchMorePhotos();
       }
     };

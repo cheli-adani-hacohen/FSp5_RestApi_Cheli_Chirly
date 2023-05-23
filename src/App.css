@@ -1,42 +1,246 @@
-/* .App {
+h2,h1 {
   text-align: center;
+  margin-bottom: 20px;
+  color: #8e7a58;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  /* text-align: center; */
+  font-family: Times New Roman, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.selected {
+  background-color: rgb(253, 240, 200);
+  /* font-weight:bold; */
+
+}
+
+.comments {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 15px;
+
+}
+
+
+span {
+  /* font-family:  sans-serif; */
+  font-size: 15px;
+  margin-bottom: 10px;
+
+}
+
+
+.user-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header img {
+  height: 80px;
+  margin-left: 40px;
+}
+body {
+  height: 125vh;
+  /* background-image: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cute-wallpaper-design-template-97f4361ca7c087eebe47265e92df58dc_screen.jpg?ts=1590309004'); */
+  background-image: url('https://images.rawpixel.com/image_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjQyLXBmczUyLXNhc2ktMTAtam9iNTk4LmpwZw.jpg');
+  /* background-image: url('https://images.rawpixel.com/image_600/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcC00NDgtcGFpLTY4My1qb2I1OTguanBn.jpg'); */
+  /* background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0xODctbnVub29uLTcxLWpvYjU5OC5qcGc.jpg'); */
+
+  background-size: cover;
+  margin-top: 80px;
+  padding: 30px;
+}
+
+main {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header * {
+  display: inline;
+
+}
+
+header li {
+  margin: 20px;
+
+}
+
+header li a {
+  color: black;
+  text-decoration: none;
+
+}
+
+
+
+/* posts */
+
+.post {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffffbd;
+  box-shadow: 0 0 8px 0 rgb(110, 110, 110);
+
+}
+
+.post-title {
+  cursor: pointer;
+  /* overflow:visible; */
+  
+}
+
+
+.post-buttons {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #ad9f86;
+  /* background-color: #dcd9d9; */
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 0 8px 0 rgb(110, 110, 110);
+
+}
+
+
+/* infos */
+
+.info {
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffffab;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+  margin-bottom: 10px;
+}
+
+.info-label {
+  display: inline-block;
+  width: 120px;
+  font-weight: bold;
+}
+
+.info-value {
+  display: inline-block;
+}
+
+.address {
+  margin-top: 10px;
+}
+
+.address-label {
+  display: block;
+  font-weight: bold;
+}
+
+.address-value {
+  margin-left: 20px;
+}
+
+/* login */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffffab;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ccbfa9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d4ccb2;
+}
+
+/* todos */
+/* .todos {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  /* margin-bottom: 10px;
+  background-color: #ffffffbd;
+  box-shadow: 0 0 8px 0 rgb(110, 110, 110);
+
 } */
 
-.selected {
-  background-color: yellow;
+.todos {
+  /* display: auto; */
+  /* align-items: center; */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #ffffffbd;
+  border-radius: 5px;
+  box-shadow: 0 0 8px 0 rgb(110, 110, 110);
+
+}
+
+.todos input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todos label {
+  font-size: 16px;
+  color: #333;
+}
+
+.todos label.completed {
+  text-decoration: line-through;
+  color: #999;
 }

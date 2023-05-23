@@ -32,7 +32,6 @@ export default function App(){
   return(
     <>
       <h1>Albums</h1>
-      <button onClick={handleChangeOrder}>Hi!!!</button>
       {albums.map(item=>
        <AlbumComponent
         key={item.id}

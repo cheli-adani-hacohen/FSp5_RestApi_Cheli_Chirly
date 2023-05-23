@@ -47,9 +47,17 @@ export default function App() {
       })
   };
 
+  
+  const handleChangeOrder = ()=>{
+    const sortedAlbums = todosList.sort((a, b) => a.title.localeCompare(b.title));
+    setTodosList(sortedAlbums);
+  }
+
   return (
     <>
       <h1>Todos {userId} !</h1>
+      <button onClick={handleChangeOrder}>Hi!!!</button>
+
       {todosList.map(item =>
       <div key={item.id}><ToDo 
       data={item}
@@ -69,10 +77,10 @@ const ToDo = ({ data, updateElement }) => {
   };
 
   return (
-    <label>
+    <label className='todos'>
       <input type="checkbox" checked={data.completed} onChange={handleCheckboxChange} />
       {data.title}
-    </label>
-  );
+    </label>
+  );
 }
 
