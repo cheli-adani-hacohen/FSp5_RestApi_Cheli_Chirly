@@ -51,12 +51,11 @@ export default function App() {
     <>
       <h1>Todos {userId} !</h1>
       {todosList.map(item =>
-      <><ToDo 
-      key={item.id}
+      <div key={item.id}><ToDo 
       data={item}
       updateElement={updateElement}/>
       <br/>
-      </>
+      </div>
       )}
     </>
   )

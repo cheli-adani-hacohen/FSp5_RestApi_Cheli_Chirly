@@ -24,10 +24,15 @@ export default function App(){
 
 
 
+  const handleChangeOrder = ()=>{
+    const sortedAlbums = albums.sort((a, b) => a.title.localeCompare(b.title));
+    setAlbums(sortedAlbums);
+  }
 
   return(
     <>
       <h1>Albums</h1>
+      <button onClick={handleChangeOrder}>Hi!!!</button>
       {albums.map(item=>
        <AlbumComponent
         key={item.id}
@@ -36,7 +41,7 @@ export default function App(){
       )}
       <Outlet/>
     </>
-  )
+  );
 }
 
 const AlbumComponent = ({album}) => {

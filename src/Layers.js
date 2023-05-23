@@ -19,19 +19,19 @@ const Layout = () => {
       <nav>
         <ul>
           <li>
-            <Link to={`/users/${id}/info`}>Info</Link>
+            <Link key="info" to={`/users/${id}/info`}>Info</Link>
           </li>
           <li>
-            <Link to={`/users/${id}/todos`}>Todos</Link>
+            <Link key="todos" to={`/users/${id}/todos`}>Todos</Link>
           </li>
           <li>
-            <Link to={`/users/${id}/posts`}>Posts</Link>
+            <Link key="posts" to={`/users/${id}/posts`}>Posts</Link>
           </li>
           <li>
-            <Link to={`/users/${id}/albums`}>Albums</Link>
+            <Link key="albums" to={`/users/${id}/albums`}>Albums</Link>
           </li>
           <li>
-            <Link to="/login" onClick={handleLogout}>Logout</Link>
+            <Link key="login" to="/login" onClick={handleLogout}>Logout</Link>
           </li>
         </ul>
       </nav>
